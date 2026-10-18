@@ -6,6 +6,21 @@ documented in this file. The version is the one in `VERSION`.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.8.0] - 2026-10-18
+
+### Changed
+
+- Tag screen, Spoolman filament picker: the list shows the filament name after the material, and an "A-Z"
+  button on the left opens a keyboard of digits and letters; the list then shows only the filaments whose vendor starts
+  with that character ("#" for other characters, "All" shows every one). The filaments are sorted without regard to upper and lower case (eSun under E). The list builds much faster, and the filaments are fetched with
+  only the fields that are used.
+  While the list builds (the first opening takes a while) a spinner is shown.
+  A text that is too long for its line now ends in "..." instead of wrapping onto a second line (the pickers and their buttons).
+  The hint entry "(pick to prefill)" at the top of the filament list is greyed out and cannot be chosen; once a filament is chosen it reads "(no template)" and drops the choice again.
+- Main screen: if the printer cannot be reached (or has no QIDI box data), the red note was cut off after the
+  first word ("nicht..."). The note and the full message now take the place of the empty slot rows, in red
+  and wrapped; the status line no longer carries it.
+
 ## [0.7.0] - 2026-10-11
 
 ### Changed
